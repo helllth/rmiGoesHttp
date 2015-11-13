@@ -8,9 +8,11 @@ package de.cismet.consulting.rmigoeshttp.step_0_simple.http;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.client.apache.ApacheHttpClient;
+import com.sun.jersey.client.apache.config.ApacheHttpClientState;
 import com.sun.jersey.client.apache.config.DefaultApacheHttpClientConfig;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
+import org.apache.commons.httpclient.auth.AuthScope;
 
 /**
  *
@@ -24,10 +26,14 @@ public class HttpClient {
         final DefaultApacheHttpClientConfig config = new DefaultApacheHttpClientConfig();
         String proxyHost = "myproxy.intra.org";
         String proxyPort = "3128";
+        String proxyUser = "";
+        String proxyPassword = "";
+        String proxyDomain = "";
 
         System.out.println(" using proxy: " + proxyHost + ":" + proxyPort);
         config.getProperties().put(DefaultApacheHttpClientConfig.PROPERTY_PROXY_URI, "http://" + proxyHost + ":" + proxyPort);
-
+        ApacheHttpClientState state = config.getState();
+        state.setProxyCredentials(AuthScope.ANY_REALM, proxyHost, Integer.parseInt(proxyPort), proxyUser, proxyPassword,proxyDomain,"");
         client = ApacheHttpClient.create(config);
 
     }
