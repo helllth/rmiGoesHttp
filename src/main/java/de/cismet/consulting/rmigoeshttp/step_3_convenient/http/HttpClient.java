@@ -5,15 +5,12 @@
  */
 package de.cismet.consulting.rmigoeshttp.step_3_convenient.http;
 
-import de.cismet.consulting.rmigoeshttp.step_4_secure.http.*;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
 import de.cismet.consulting.rmigoeshttp.step_2_complex.data.CustomSubType;
 import de.cismet.consulting.rmigoeshttp.step_2_complex.data.CustomType;
 import de.cismet.consulting.rmigoeshttp.tools.Converter;
 import de.cismet.consulting.rmigoeshttp.tools.HttpServiceClientHelper;
-import de.cismet.consulting.rmigoeshttp.tools.SSLConfigFactory;
 import de.cismet.consulting.rmigoeshttp.tools.SSLConfigFactoryException;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 

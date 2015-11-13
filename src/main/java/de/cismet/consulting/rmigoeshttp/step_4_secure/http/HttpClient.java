@@ -23,7 +23,8 @@ import java.io.IOException;
 public class HttpClient extends HttpServiceClientHelper {
 
     public HttpClient() throws SSLConfigFactoryException, FileNotFoundException {
-        super("https://localhost:8081/complex/service/", SSLConfigFactory.getDefault().createClientConfig(new FileInputStream("/Users/thorsten/dev/810-rmiGoesHttp/server.localhost.demo.cert")));
+        super("https://localhost:8081/complex/service/", 
+                SSLConfigFactory.getDefault().createClientConfig(new FileInputStream("/Users/thorsten/dev/810-rmiGoesHttp/server.localhost.demo.cert")));
     }
 
     public CustomType doStuff(CustomType ct) throws IOException, ClassNotFoundException {

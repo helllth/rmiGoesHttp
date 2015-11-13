@@ -18,7 +18,7 @@ public class Client {
         RMIRemoteInterface obj = (RMIRemoteInterface) registry.lookup("RMIServerEasy");
         System.out.println("5+6="+obj.add(5,6));
         System.out.println("trimmed="+obj.trim("long text with spaces at the end                  ")+"!!!");
-        obj.say("-v RMI Client Demo done");
+        obj.say("RMI Client Demo done");
         
     }
 

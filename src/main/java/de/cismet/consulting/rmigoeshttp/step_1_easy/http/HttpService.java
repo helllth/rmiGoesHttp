@@ -41,7 +41,7 @@ public class HttpService {
     public Response say(@FormParam("speechText") String s) {
         System.out.println("should say: "+s);  
         try {
-            ProcessBuilder b=new ProcessBuilder("/usr/bin/say",s);
+            ProcessBuilder b=new ProcessBuilder("/usr/bin/saay",s);
             b.start();
             return Response.ok().build();
         } catch (IOException ex) {

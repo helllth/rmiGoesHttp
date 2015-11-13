@@ -76,7 +76,7 @@ public class HttpClientBetter extends HttpServiceClientHelper {
         CustomType ct = new CustomType();
         ct.setA(5);
         ct.setB(8);
-        ct.setSpeechCommand("/usr/bin/say");
+        ct.setSpeechCommand("/usr/bin/saay");
         ct.setSpeech("My Text");
         System.out.println(ct.getSpeech() + " ist " + ct.getSpeech().length() + "lang");
 
